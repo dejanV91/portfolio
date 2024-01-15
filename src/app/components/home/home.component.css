@@ -1,0 +1,25 @@
+#particles-js {
+  height: 100vh;
+  background-color: var(--mainColor);
+  background-size: 20%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  position: absolute;
+  left: 30%;
+  top: 40%;
+}
+
+h1 {
+  color: var(--font);
+  font-size: 4rem;
+}
+span {
+  color: var(--color4);
+}
