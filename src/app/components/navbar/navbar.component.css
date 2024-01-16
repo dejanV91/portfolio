@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+nav {
+  position: relative;
+  white-space: nowrap;
+}
+
+.active {
+  position: absolute;
+  z-index: 0;
+  width: 25%;
+  mix-blend-mode: multiply;
+  transition: transform 0.5s ease-in-out;
+}
+
+nav.full {
+  font-weight: bold;
+  background: var(--colorBlack1);
+  color: var(--font);
+  font-size: 1.3em;
+  .active {
+    height: 100%;
+    background: var(--color5);
+  }
+}
+
+a {
+  display: inline-block;
+  z-index: 10;
+  width: 25%;
+  padding: 1em 0;
+  text-align: center;
+  cursor: pointer;
+  color: var(--font);
+  text-decoration: none;
+}
