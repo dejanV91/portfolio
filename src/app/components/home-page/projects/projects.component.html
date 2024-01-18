@@ -1,50 +1,21 @@
 <div id="projects" class="container">
   <h1>Projects</h1>
   <div class="projects">
-    <div class="project-item">
+    <div
+      (click)="changeScrollY()"
+      [routerLink]="['project', project.id]"
+      *ngFor="let project of projects"
+      class="project-item"
+    >
       <div class="text-div">
-        <h3>Busplus</h3>
+        <h3>{{ project.name }}</h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet qui
-          autem provident ratione in assumenda rem voluptates? Ea, nesciunt
-          ipsa!
+          {{ project.description }}
         </p>
       </div>
-      <img
-        class="image"
-        src="../../../assets/images/busplus2.jpg"
-        alt="busplus"
-      />
-    </div>
-    <div [routerLink]="['project/searchGithubUser']" class="project-item">
-      <div class="text-div">
-        <h3>Search Github Users</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet qui
-          autem provident ratione in assumenda rem voluptates? Ea, nesciunt
-          ipsa!
-        </p>
+      <div class="image">
+        <img class="image" src="{{ project.image }}" alt="{{ project.name }}" />
       </div>
-      <img
-        class="image"
-        src="../../../assets/images/searchGithubUser.png"
-        alt="search"
-      />
-    </div>
-    <div [routerLink]="['project/appFood']" class="project-item">
-      <div class="text-div">
-        <h3>Restaurant</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet qui
-          autem provident ratione in assumenda rem voluptates? Ea, nesciunt
-          ipsa!
-        </p>
-      </div>
-      <img
-        class="image"
-        src="../../../assets/images/appFood.png"
-        alt="restaurant"
-      />
     </div>
   </div>
 </div>

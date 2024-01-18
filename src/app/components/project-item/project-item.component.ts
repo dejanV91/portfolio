@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Project } from 'src/app/models/project';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
   selector: 'app-project-item',
@@ -7,11 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./project-item.component.css'],
 })
 export class ProjectItemComponent implements OnInit {
-  name!: string;
+  project!: Project;
 
-  constructor(private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private service: ProjectsService
+  ) {}
 
   ngOnInit(): void {
-    console.log(this.router.url);
+    this.route.params.subscribe((url: any) => {
+      this.project = this.service.getProjectById(url.id);
+    });
   }
 }

@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home-page/home/home.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'project/:name', component: ProjectItemComponent },
+  { path: 'project/:id', component: ProjectItemComponent },
   { path: '', pathMatch: 'prefix', redirectTo: '/' },
 ];
 

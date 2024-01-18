@@ -1,1 +1,28 @@
-<p>project-item works!</p>
+<div class="container">
+  <div class="project">
+    <h1>{{ project.name }}</h1>
+    <article>
+      <div class="image">
+        <img src="{{ project.image }}" alt="{{ project.name }}" />
+      </div>
+      <aside>
+        <p class="bold">Description:</p>
+        <p>{{ project.description }}</p>
+        <div class="tools">
+          <p class="bold">Tools:</p>
+          <p class="tool" *ngFor="let tool of project.tools">
+            {{ tool }}
+          </p>
+        </div>
+        <a
+          type="button"
+          href="{{ project.site }}"
+          target="_blank"
+          class="btn demo"
+          >Demo</a
+        >
+      </aside>
+    </article>
+  </div>
+  <button class="btn" routerLink="/">⬅ Back To Homepage</button>
+</div>

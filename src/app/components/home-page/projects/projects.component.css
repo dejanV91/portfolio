@@ -30,6 +30,9 @@ h1 {
   border: 8px solid var(--color4);
   background-color: var(--colorBlack1);
   transition: 0.5s all ease;
+  height: 600px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 .project-item:hover {
@@ -54,9 +57,10 @@ p {
 }
 
 img {
-  width: 100%;
+  object-fit: cover;
 }
 
 .image {
-  display: flex;
+  height: 100%;
+  width: 100%;
 }
