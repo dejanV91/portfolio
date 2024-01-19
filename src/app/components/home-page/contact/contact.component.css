@@ -6,6 +6,12 @@
   flex-direction: column;
   align-items: center;
 }
+
+article {
+  width: 60%;
+  max-width: 1500px;
+}
+
 h1 {
   color: var(--font);
   font-size: 3rem;
@@ -13,4 +19,48 @@ h1 {
   width: 40%;
   text-align: center;
   border-bottom: 5px solid var(--font);
+}
+
+p {
+  margin-top: 30px;
+  font-size: 1.7rem;
+  color: var(--font);
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--font);
+}
+
+.email {
+  font-size: 2rem;
+  color: var(--font);
+  text-decoration: none;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin: 40px;
+}
+
+.icon-link {
+  font-size: 2.5rem;
+  color: var(--font);
+  cursor: pointer;
+  transition: 0.3s ease scale;
+}
+
+.icon-link:hover {
+  scale: 1.2;
+  color: white;
 }

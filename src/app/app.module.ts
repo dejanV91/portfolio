@@ -10,6 +10,7 @@ import { AboutComponent } from './components/home-page/about/about.component';
 import { ContactComponent } from './components/home-page/contact/contact.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     ProjectItemComponent,
     HomePageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
