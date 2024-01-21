@@ -16,7 +16,7 @@ export class ProjectsComponent implements OnInit {
     this.projects = this.service.getaAllProjects();
   }
 
-  changeScrollY() {
-    localStorage.setItem('projectsPage', JSON.stringify(true));
+  isProject() {
+    localStorage.setItem('coords', JSON.stringify(window.scrollY));
   }
 }

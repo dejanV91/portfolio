@@ -20,11 +20,12 @@ h1 {
   width: 40%;
   text-align: center;
   border-bottom: 5px solid var(--font);
+  margin-bottom: 100px;
 }
 
 p {
   margin-top: 30px;
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: var(--font);
 }
 

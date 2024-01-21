@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
     writer
       .strings(
-        400,
+        2000,
         'Frontend Developer',
         'React Developer',
         'Angular Developer'
