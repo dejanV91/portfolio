@@ -4,11 +4,11 @@ Welcome to my portfolio :)
 
 ## Screenshots 🖼️
 
-![Portfolio](src\assets\images\portfolio.png)
+![Portfolio](assets\images\portfolio.png)
 
 ## Links 📌
 
-Demo: [Portfolio](https://dejanv91.github.io/busplus)
+Demo: [Portfolio](https://dejanv91.github.io/portfolio)
 
 ## Built with 🛠️
 
