@@ -10,9 +10,11 @@
         <p>{{ project.description }}</p>
         <div class="tools">
           <p class="bold">Tools:</p>
-          <p class="tool" *ngFor="let tool of project.tools">
-            {{ tool }}
-          </p>
+          <div class="tags">
+            <p class="tool" *ngFor="let tool of project.tools">
+              {{ tool }}
+            </p>
+          </div>
         </div>
         <a
           type="button"
@@ -24,5 +26,7 @@
       </aside>
     </article>
   </div>
-  <button class="btn" routerLink="/">⬅ Back To Homepage</button>
+  <button class="btn" routerLink="/">
+    ⬅ <span class="view">Back To Homepage</span>
+  </button>
 </div>
