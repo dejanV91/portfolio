@@ -3,8 +3,9 @@
 Welcome to my portfolio :)
 
 ## Screenshots 🖼️
+![img](src/assets/images/busplus2.jpg)
 
-![Portfolio](assets\images\portfolio.png)
+![portfolio](src/assets/images/portfolio.png)
 
 ## Links 📌
 
