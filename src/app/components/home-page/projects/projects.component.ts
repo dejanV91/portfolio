@@ -15,8 +15,4 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.projects = this.service.getaAllProjects();
   }
-
-  isProject() {
-    localStorage.setItem('coords', JSON.stringify(window.scrollY));
-  }
 }

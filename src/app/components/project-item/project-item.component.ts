@@ -17,6 +17,7 @@ export class ProjectItemComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'instant' });
     this.route.params.subscribe((url: any) => {
       this.project = this.service.getProjectById(url.id);
     });

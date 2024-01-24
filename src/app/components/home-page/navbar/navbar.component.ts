@@ -12,19 +12,13 @@ export class NavbarComponent implements OnInit {
     let section = document.querySelectorAll('.container');
     let navLinks = document.querySelectorAll('header nav a');
 
-    if (localStorage.getItem('coords')) {
-      let coords: number = Number(localStorage.getItem('coords'));
-      window.scrollTo({ top: coords, behavior: 'instant' });
-      localStorage.removeItem('coords');
-    }
-
     window.onscroll = () => {
       section.forEach((sec) => {
-        let current = sec as HTMLDivElement;
+        let currentSection = sec as HTMLDivElement;
 
         let top = window.scrollY;
-        let offset = current.offsetTop;
-        let id = current.getAttribute('id');
+        let offset = currentSection.offsetTop;
+        let id = currentSection.getAttribute('id');
 
         if (top >= offset - 300) {
           navLinks.forEach((links) => {
