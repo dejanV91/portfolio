@@ -5,6 +5,8 @@
       *ngFor="let project of projects"
       [routerLink]="['project', project.id]"
       class="project-item"
+      id="{{ project.id }}"
+      (click)="clickProject(project.id)"
     >
       <div class="text-div">
         <h3>{{ project.name }}</h3>

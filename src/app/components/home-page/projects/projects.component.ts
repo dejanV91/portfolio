@@ -15,4 +15,14 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.projects = this.service.getaAllProjects();
   }
+
+  clickProject(id: number) {
+    let projectDiv = document.getElementById(String(id));
+
+    localStorage.setItem(
+      'offsetTop',
+      // scrollY for projet div in projects element from body
+      JSON.stringify(projectDiv?.offsetParent?.getBoundingClientRect().top)
+    );
+  }
 }

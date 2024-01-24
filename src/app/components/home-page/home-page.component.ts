@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css'],
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements AfterViewInit {
   constructor() {}
 
-  ngOnInit(): void {
-    let projectsElement = document.getElementById('projects') as HTMLDivElement;
+  ngAfterViewInit(): void {
+    let scrollY = localStorage.getItem('offsetTop');
     window.scroll({
-      top: projectsElement.offsetTop,
+      top: Math.abs(Number(scrollY)),
       behavior: 'instant',
     });
+    localStorage.removeItem('offsetTop');
   }
 }
